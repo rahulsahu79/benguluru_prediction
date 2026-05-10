@@ -8,6 +8,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from logger import logger
 
 # ==============================
+# CONFIGURATION
+# ==============================
+API_BASE_URL = "https://benguluru-prediction.vercel.app"
+
+# ==============================
 # FASTAPI APP
 # ==============================
 app = FastAPI()
@@ -15,7 +20,12 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        API_BASE_URL,
+        "http://localhost:3000",
+        "http://localhost:8000",
+        "*"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
