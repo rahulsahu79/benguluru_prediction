@@ -27,7 +27,7 @@ logger.info("Starting Bengaluru House Price Prediction API")
 # LOAD MODEL
 # ==============================
 try:
-    model = joblib.load("benguluru_prediction\backed\benguluru_model.pkl")
+    model = joblib.load("benguluru_model.pkl")
     print(type(model))
 
     logger.info("Model loaded successfully")

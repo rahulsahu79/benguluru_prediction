@@ -1,0 +1,28 @@
+2026-05-10 11:58:02,148 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 11:58:02,148 - ERROR - Error loading model: [Errno 22] Invalid argument: 'benguluru_prediction\x08acked\x08enguluru_model.pkl'
+2026-05-10 12:02:30,409 - INFO - Prediction request received: area_type='Super built-up  Area' availability='Ready' location='Bannerghatta Road' total_sqft=1200.0 bath=1.0 balcony=2.0 bhk=-3
+2026-05-10 12:02:30,409 - ERROR - Model not loaded
+2026-05-10 12:03:46,132 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 12:03:49,412 - INFO - Model loaded successfully
+2026-05-10 12:03:49,474 - INFO - Prediction request received: area_type='Super built-up  Area' availability='Ready' location='Bannerghatta Road' total_sqft=1200.0 bath=1.0 balcony=2.0 bhk=-3
+2026-05-10 12:03:49,525 - INFO - Input dataframe created:
+              area_type  ... bhk
+0  Super built-up  Area  ...  -3
+
+[1 rows x 7 columns]
+2026-05-10 12:03:49,654 - INFO - Prediction successful: 61.27974408631894
+2026-05-10 12:07:09,091 - INFO - Prediction request received: area_type='Super built-up  Area' availability='Ready' location='Bannerghatta Road' total_sqft=1200.0 bath=1.0 balcony=2.0 bhk=-3
+2026-05-10 12:07:09,115 - INFO - Input dataframe created:
+              area_type  ... bhk
+0  Super built-up  Area  ...  -3
+
+[1 rows x 7 columns]
+2026-05-10 12:07:09,235 - INFO - Prediction successful: 61.279744086318956
+2026-05-10 12:12:42,236 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 12:12:44,974 - INFO - Model loaded successfully
+2026-05-10 12:12:45,088 - INFO - Unique values loaded successfully
+2026-05-10 12:12:47,758 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 12:12:50,168 - INFO - Model loaded successfully
+2026-05-10 12:12:50,218 - INFO - Unique values loaded successfully
+2026-05-10 12:13:06,304 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 12:13:08,219 - INFO - Model loaded successfully
