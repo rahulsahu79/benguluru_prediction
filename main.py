@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import pandas as pd
 import joblib
 from fastapi.middleware.cors import CORSMiddleware
+from urllib.parse import urlparse
 
 # Import logger
 from logger import logger
@@ -10,7 +11,26 @@ from logger import logger
 # ==============================
 # CONFIGURATION
 # ==============================
+
+def is_valid_url(url: str) -> bool:
+    try:
+        parsed = urlparse(url)
+        return parsed.scheme in ("http", "https") and bool(parsed.netloc)
+    except Exception:
+        return False
+
+
 API_BASE_URL = "https://benguluru-prediction.vercel.app"
+APP_ENV = "production" if API_BASE_URL == "https://benguluru-prediction.vercel.app" else "development"
+IS_PRODUCTION = APP_ENV == "production"
+
+if not is_valid_url(API_BASE_URL):
+    logger.error(f"Invalid API_BASE_URL configured: {API_BASE_URL}")
+    raise RuntimeError(f"Invalid API_BASE_URL configured: {API_BASE_URL}")
+
+logger.info(
+    f"API_BASE_URL={API_BASE_URL} APP_ENV={APP_ENV} is_production={IS_PRODUCTION}"
+)
 
 # ==============================
 # FASTAPI APP
@@ -23,8 +43,7 @@ app.add_middleware(
     allow_origins=[
         API_BASE_URL,
         "http://localhost:3000",
-        "http://localhost:8000",
-        "*"
+        "http://localhost:8000"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -70,6 +89,19 @@ def home():
 
     return {
         "message": "Bengaluru House Price Prediction API Running"
+    }
+
+
+@app.get("/config")
+def get_config():
+
+    logger.info("Config endpoint accessed")
+
+    return {
+        "api_base_url": API_BASE_URL,
+        "app_env": APP_ENV,
+        "is_production": IS_PRODUCTION,
+        "url_valid": True
     }
 
 # ==============================

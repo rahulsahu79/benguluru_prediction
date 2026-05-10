@@ -26,3 +26,95 @@
 2026-05-10 12:12:50,218 - INFO - Unique values loaded successfully
 2026-05-10 12:13:06,304 - INFO - Starting Bengaluru House Price Prediction API
 2026-05-10 12:13:08,219 - INFO - Model loaded successfully
+2026-05-10 18:54:13,419 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 18:54:18,929 - INFO - Model loaded successfully
+2026-05-10 18:59:09,695 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='Celebrity Paradise Layout' total_sqft=1400.0 bath=2.0 balcony=1.0 bhk=2
+2026-05-10 18:59:09,780 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 18:59:09,803 - ERROR - Prediction error: Found unknown categories ['Celebrity Paradise Layout'] in column 0 during transform
+2026-05-10 18:59:56,656 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='Bharath Housing Society Layout' total_sqft=1200.0 bath=2.0 balcony=-7.0 bhk=2
+2026-05-10 18:59:56,703 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 18:59:56,723 - ERROR - Prediction error: Found unknown categories ['Bharath Housing Society Layout'] in column 0 during transform
+2026-05-10 19:00:37,144 - INFO - Prediction request received: area_type='Super built-up Area' availability='Future' location='Byrasandra Extension' total_sqft=1400.0 bath=1.0 balcony=1.0 bhk=-3
+2026-05-10 19:00:37,189 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...  -3
+
+[1 rows x 7 columns]
+2026-05-10 19:00:37,210 - ERROR - Prediction error: Found unknown categories ['Byrasandra Extension'] in column 0 during transform
+2026-05-10 19:01:39,936 - INFO - Prediction request received: area_type='Super built-up Area' availability='Future' location='Byrasandra Extension' total_sqft=1400.0 bath=1.0 balcony=1.0 bhk=-3
+2026-05-10 19:01:39,998 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...  -3
+
+[1 rows x 7 columns]
+2026-05-10 19:01:40,010 - ERROR - Prediction error: Found unknown categories ['Byrasandra Extension'] in column 0 during transform
+2026-05-10 19:08:20,567 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='Bannerghatta Road' total_sqft=1022.0 bath=1.0 balcony=2.0 bhk=2
+2026-05-10 19:08:20,597 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 19:08:20,604 - ERROR - Prediction error: Found unknown categories ['Super built-up Area'] in column 2 during transform
+2026-05-10 19:08:42,066 - INFO - Prediction request received: area_type='Built-up Area' availability='Ready' location='Bannerghatta Road' total_sqft=1022.0 bath=1.0 balcony=2.0 bhk=2
+2026-05-10 19:08:42,102 - INFO - Input dataframe created:
+       area_type availability  ... balcony  bhk
+0  Built-up Area        Ready  ...     2.0    2
+
+[1 rows x 7 columns]
+2026-05-10 19:08:42,111 - ERROR - Prediction error: Found unknown categories ['Built-up Area'] in column 2 during transform
+2026-05-10 19:17:15,326 - INFO - Home endpoint accessed
+2026-05-10 19:17:24,049 - INFO - Home endpoint accessed
+2026-05-10 19:19:39,283 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='1Kasavanhalli' total_sqft=1200.0 bath=1.0 balcony=1.0 bhk=2
+2026-05-10 19:19:39,297 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 19:19:39,303 - ERROR - Prediction error: Found unknown categories ['1Kasavanhalli'] in column 0 during transform
+2026-05-10 19:20:17,585 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='1Kasavanhalli' total_sqft=1200.0 bath=1.0 balcony=1.0 bhk=2
+2026-05-10 19:20:17,597 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 19:20:17,601 - ERROR - Prediction error: Found unknown categories ['1Kasavanhalli'] in column 0 during transform
+2026-05-10 19:25:05,594 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 19:25:07,334 - INFO - Model loaded successfully
+2026-05-10 19:26:14,051 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='Annasandrapalya' total_sqft=1200.0 bath=2.0 balcony=1.0 bhk=5
+2026-05-10 19:26:14,073 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   5
+
+[1 rows x 7 columns]
+2026-05-10 19:26:14,205 - INFO - Prediction successful: 89.84013412603515
+2026-05-10 19:27:22,939 - INFO - Prediction request received: area_type='Super built-up Area' availability='Ready' location='AECS LAYOUT A-BLOCK Singasandra' total_sqft=1400.0 bath=2.0 balcony=1.0 bhk=2
+2026-05-10 19:27:22,957 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 19:27:23,099 - INFO - Prediction successful: 75.34750795732803
+2026-05-10 19:27:49,226 - INFO - Prediction request received: area_type='Super built-up Area' availability='Future' location='AECS LAYOUT A-BLOCK Singasandra' total_sqft=1400.0 bath=2.0 balcony=1.0 bhk=2
+2026-05-10 19:27:49,263 - INFO - Input dataframe created:
+             area_type  ... bhk
+0  Super built-up Area  ...   2
+
+[1 rows x 7 columns]
+2026-05-10 19:27:49,385 - INFO - Prediction successful: 80.8170128844995
+2026-05-10 19:30:44,449 - INFO - API_BASE_URL=https://benguluru-prediction.vercel.app APP_ENV=development is_production=False
+2026-05-10 19:30:44,450 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 19:30:46,570 - INFO - Model loaded successfully
+2026-05-10 19:33:28,865 - INFO - API_BASE_URL=https://benguluru-prediction.vercel.app APP_ENV=production is_production=True
+2026-05-10 19:33:28,868 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 19:33:32,363 - INFO - Model loaded successfully
+2026-05-10 19:33:44,759 - INFO - API_BASE_URL=https://benguluru-prediction.vercel.app APP_ENV=production is_production=True
+2026-05-10 19:33:44,760 - INFO - Starting Bengaluru House Price Prediction API
+2026-05-10 19:33:46,695 - INFO - Model loaded successfully
