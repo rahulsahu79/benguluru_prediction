@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import { locationOptions } from "../constants/locationOptions";
 
 export default function Home() {
 
@@ -19,8 +20,20 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const areaTypeOptions = [
+    "Super built-up Area",
+    "Built-up Area",
+    "Carpet Area",
+    "Plot Area"
+  ];
+
+  const availabilityOptions = [
+    "Ready",
+    "Future"
+  ];
+
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
 
     setFormData({
@@ -162,16 +175,24 @@ export default function Home() {
                   Area Type
                 </label>
 
-                <input
-                  type="text"
+                <select
                   name="area_type"
-                  placeholder="Example: Super built-up Area"
+                  value={formData.area_type}
                   onChange={handleChange}
                   className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
-                />
+                >
+                  <option value="" disabled>
+                    Select area type
+                  </option>
+                  {areaTypeOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
 
                 <p className="text-xs text-gray-500 mt-2">
-                  Enter property area type.
+                  Choose the property area type.
                 </p>
 
               </div>
@@ -183,16 +204,24 @@ export default function Home() {
                   Availability
                 </label>
 
-                <input
-                  type="text"
+                <select
                   name="availability"
-                  placeholder="Example: Ready"
+                  value={formData.availability}
                   onChange={handleChange}
                   className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
-                />
+                >
+                  <option value="" disabled>
+                    Select availability
+                  </option>
+                  {availabilityOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
 
                 <p className="text-xs text-gray-500 mt-2">
-                  Example values: Ready, Immediate Possession
+                  Choose whether the property is ready or future availability.
                 </p>
 
               </div>
@@ -204,16 +233,24 @@ export default function Home() {
                   Location
                 </label>
 
-                <input
-                  type="text"
+                <select
                   name="location"
-                  placeholder="Example: Whitefield"
+                  value={formData.location}
                   onChange={handleChange}
                   className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
-                />
+                >
+                  <option value="" disabled>
+                    Select location
+                  </option>
+                  {locationOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
 
                 <p className="text-xs text-gray-500 mt-2">
-                  Popular areas: Whitefield, Indiranagar, Electronic City
+                  Choose a popular Bengaluru location.
                 </p>
 
               </div>
