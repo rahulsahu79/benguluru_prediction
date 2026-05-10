@@ -42,6 +42,9 @@ export default function Home() {
     });
   };
 
+  // Use the production API URL from environment, otherwise default to the backend production host.
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "https://benguluru-prediction.vercel.app";
+
   const predictPrice = async () => {
 
     try {
@@ -51,7 +54,7 @@ export default function Home() {
       setPrediction("");
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/predict",
+        `${apiBaseUrl}/predict`,
         {
           ...formData,
           total_sqft: Number(formData.total_sqft),
@@ -268,6 +271,7 @@ export default function Home() {
                     type="number"
                     name="total_sqft"
                     placeholder="1200"
+                    min="0"
                     onChange={handleChange}
                     className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
                   />
@@ -288,6 +292,7 @@ export default function Home() {
                     type="number"
                     name="bhk"
                     placeholder="2"
+                    min="0"
                     onChange={handleChange}
                     className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
                   />
@@ -313,6 +318,7 @@ export default function Home() {
                     type="number"
                     name="bath"
                     placeholder="2"
+                    min="0"
                     onChange={handleChange}
                     className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
                   />
@@ -333,6 +339,7 @@ export default function Home() {
                     type="number"
                     name="balcony"
                     placeholder="1"
+                    min="0"
                     onChange={handleChange}
                     className="w-full bg-[#1e293b] border border-slate-700 rounded-xl p-4 outline-none focus:border-blue-400 transition-all"
                   />
